@@ -107,3 +107,77 @@ The performance of both models is evaluated using standard metrics:
 
 ---
 
+## 📊 Results
+
+Both **YOLOv8** and **DenseNet121** were evaluated on the test dataset to analyze their effectiveness in detecting violent and non-violent activities.
+
+- YOLOv8 successfully detected and localized violent regions using bounding box predictions.
+- DenseNet121 demonstrated reliable performance for image-level violence classification.
+- Detection-based approaches provide better interpretability for surveillance applications.
+- Classification-based approaches are computationally efficient and easier to deploy.
+
+---
+
+## 🧠 Comparative Analysis
+
+A comparison of the two models highlights their strengths and limitations.
+
+### 🔍 YOLOv8
+- Performs object detection with spatial localization
+- Suitable for real-time surveillance systems
+- Provides bounding box confidence scores
+- Requires higher computational resources
+
+### 🧠 DenseNet121
+- Performs binary image classification
+- Faster inference on low-resource systems
+- Simpler training and deployment pipeline
+- Does not provide region-level localization
+
+---
+
+## 🔎 Key Observations
+
+- Object detection models are more effective when spatial understanding is required.
+- Image classification models are sufficient when only a binary decision is needed.
+- Dataset quality and annotation accuracy significantly impact model performance.
+- Transfer learning improves convergence and generalization.
+
+---
+
+## 🔮 Future Work
+
+- Extend the system to video-based violence detection.
+- Integrate temporal modeling techniques such as LSTM or 3D CNN.
+- Improve robustness using larger and more diverse datasets.
+- Deploy the system in real-time surveillance environments.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- PyTorch
+- TensorFlow / Keras
+- Ultralytics YOLOv8
+- OpenCV
+- Roboflow
+- NumPy
+- Matplotlib
+
+---
+
+## 👤 Author
+
+**Yash Kumbhawat**  
+Department of Information Technology
+NITK
+
+---
+
+## 📜 License
+
+This project is intended for academic and research purposes.  
+You are free to use, modify, and distribute this project with proper attribution.
+
+
