@@ -21,3 +21,27 @@ Manual monitoring of surveillance footage is inefficient and error-prone. Automa
 This project aims to compare **detection-based** and **classification-based** approaches for violence detection.
 
 ---
+
+## 📂 Dataset Description
+- **Dataset Name**: Violence Detection Dataset  
+- **Source**: Roboflow Universe  
+- **Link**: https://universe.roboflow.com/sihtest/violence-detection-ufkio  
+- **Type**: Image Dataset  
+- **Classes**:
+  - `Violence`
+  - `Non-Violence`
+- **Annotations**:
+  - Bounding box annotations (used for YOLOv8)
+  - Image-level labels (used for DenseNet121)
+
+---
+
+## 🏗️ Project Architecture
+This project follows two parallel pipelines:
+
+### 1️⃣ YOLOv8-Based Pipeline (Object Detection)
+- Uses bounding box annotations
+- Detects violent regions in images
+- Suitable for real-time surveillance applications
+
+- 
