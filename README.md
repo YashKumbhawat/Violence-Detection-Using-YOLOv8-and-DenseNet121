@@ -36,12 +36,74 @@ This project aims to compare **detection-based** and **classification-based** ap
 
 ---
 
-## 🏗️ Project Architecture
-This project follows two parallel pipelines:
+## 🏗️ Methodology
+This project follows two parallel deep learning approaches to detect violence from images:
+- **Object detection–based approach** using YOLOv8
+- **Image classification–based approach** using DenseNet121
 
-### 1️⃣ YOLOv8-Based Pipeline (Object Detection)
-- Uses bounding box annotations
-- Detects violent regions in images
-- Suitable for real-time surveillance applications
+Both models are trained and evaluated on the same dataset to ensure a fair comparison.
 
-- 
+---
+
+## 🔍 Model 1: YOLOv8 (Object Detection)
+YOLOv8 is employed to detect violent regions within an image using bounding box annotations.
+
+### Key Characteristics
+- Single-stage object detector  
+- Real-time inference capability  
+- Predicts bounding boxes with class confidence scores  
+- Suitable for surveillance and security applications  
+
+### Workflow
+1. Input image preprocessing  
+2. Feature extraction using YOLOv8 backbone  
+3. Feature aggregation via neck layers  
+4. Bounding box and class prediction  
+
+---
+
+## 🧠 Model 2: DenseNet121 (Image Classification)
+DenseNet121 is used to classify the entire image as **Violence** or **Non-Violence**.
+
+### Key Characteristics
+- Deep convolutional neural network  
+- Dense connectivity between layers  
+- Efficient feature reuse  
+- Reduced vanishing gradient problem  
+
+### Workflow
+1. Input image preprocessing  
+2. Feature extraction using DenseNet121  
+3. Global average pooling  
+4. Binary classification output  
+
+---
+
+## ⚙️ Training Strategy
+
+### YOLOv8
+- Trained using bounding box annotations  
+- Loss components include:
+  - Classification loss  
+  - Bounding box regression loss  
+- Trained for multiple epochs until convergence  
+
+### DenseNet121
+- Transfer learning with ImageNet-pretrained weights  
+- Final classification layer modified for binary output  
+- Optimizer: Adam  
+- Loss Function: Binary Cross-Entropy  
+
+---
+
+## 📊 Evaluation Metrics
+The performance of both models is evaluated using standard metrics:
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Confusion Matrix (DenseNet121)  
+- Detection confidence scores (YOLOv8)  
+
+---
+
