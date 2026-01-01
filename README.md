@@ -170,8 +170,7 @@ A comparison of the two models highlights their strengths and limitations.
 ## 👤 Author
 
 **Yash Kumbhawat**  
-Department of Information Technology,
-
+Department of Information Technology,  
 NITK
 
 ---
